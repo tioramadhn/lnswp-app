@@ -9,28 +9,23 @@ import Drawer from "./Drawer";
 import { LogoutOutlined } from "@mui/icons-material";
 export default function Header() {
   return (
-    <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" elevation={0} color="transparent">
-          <Toolbar
-            sx={{ alignItems: "center", justifyContent: "space-between" }}
-          >
-            <Box>
-              <img src="insw-logo.png" alt="Logo insw" width={100} />
-            </Box>
-            <Stack direction={"row"} spacing={1}>
-              <IconButton>
-                <NotificationsNoneIcon />
-              </IconButton>
-              <IconButton>
-                <LogoutOutlined />
-              </IconButton>
-            </Stack>
-          </Toolbar>
-        </AppBar>
-        <Divider />
-      </Box>
-      <Drawer />
-    </>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" elevation={0} color="transparent">
+        <Toolbar sx={{ alignItems: "center", justifyContent: "space-between" }}>
+          <Box>
+            <img src="insw-logo.png" alt="Logo insw" width={100} />
+          </Box>
+          <Stack direction={"row"} spacing={1}>
+            <IconButton>
+              <NotificationsNoneIcon />
+            </IconButton>
+            <IconButton>
+              <LogoutOutlined />
+            </IconButton>
+          </Stack>
+        </Toolbar>
+      </AppBar>
+      <Divider />
+    </Box>
   );
 }
